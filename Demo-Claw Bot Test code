@@ -1,0 +1,37 @@
+#include <kipr/wombat.h>
+
+int main()
+{
+    enable_servos();
+    // picking up the first height yellow cube
+    set_servo_position(0, 897);
+    msleep(2000);
+    
+    set_servo_position(2, 1750);
+    msleep(2000);
+    
+    set_servo_position(0, 1400);
+    msleep(2000);
+    
+    
+    disable_servos();
+   
+   //pulling out red tubes
+    
+    enable_servos();
+    
+    set_servo_position(0, 620);
+    msleep(2000);
+    
+    set_servo_position(2, 2047);
+    msleep(2000);
+    
+    motor(0,-100);
+    motor(3,-100);
+    msleep(2000);
+    
+    disable_servos();
+    
+    
+    return 0;
+}
